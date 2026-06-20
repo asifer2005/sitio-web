@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software para autónomos y negocios locales — CitaFlow y ReseñaBoost</title>
+<meta name="description" content="Herramientas web por suscripción para pequeños negocios en España: recordatorios de cita por WhatsApp/SMS (CitaFlow) y gestión de reseñas de Google con IA (ReseñaBoost).">
+<style>
+  :root{
+    --bg:#0d0f14; --surface:#151a21; --surface2:#1d242d; --border:#2a323c;
+    --text:#e7edf3; --muted:#94a3b8;
+    --green:#22c55e; --green2:#16a34a;
+    --purple:#6d5efc; --purple2:#a78bfa;
+    --radius:16px; --shadow:0 18px 50px rgba(0,0,0,.45);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  svg{display:block}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.82);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.3px}
+  .brand .mark{width:32px;height:32px;border-radius:9px;
+    background:linear-gradient(135deg,var(--green),var(--purple));display:grid;place-items:center;
+    font-size:16px;color:#fff;font-weight:900}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--muted);font-size:14.5px;font-weight:600}
+  .nav-links a:hover{color:var(--text)}
+  .nav-cta{background:linear-gradient(135deg,var(--green),var(--purple));color:#fff;padding:9px 16px;
+    border-radius:10px;font-weight:800;font-size:14px}
+  @media(max-width:720px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* HERO */
+  .hero{text-align:center;padding:84px 0 60px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(900px 400px at 30% -10%,rgba(34,197,94,.18),transparent 60%),
+               radial-gradient(900px 400px at 70% -10%,rgba(109,94,252,.20),transparent 60%)}
+  .hero .tag{display:inline-block;background:var(--surface2);border:1px solid var(--border);
+    color:var(--muted);font-size:13px;font-weight:700;padding:6px 14px;border-radius:99px;margin-bottom:22px}
+  .hero h1{font-size:clamp(30px,5vw,50px);line-height:1.08;letter-spacing:-1.4px;max-width:760px;margin:0 auto}
+  .hero h1 b{background:linear-gradient(120deg,var(--green),var(--purple2));-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .hero p{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:600px;margin:20px auto 30px}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:12px;
+    font-weight:800;font-size:15px;border:1px solid transparent;transition:.15s}
+  .btn.green{background:var(--green);color:#04110a}
+  .btn.green:hover{background:var(--green2)}
+  .btn.purple{background:var(--purple);color:#fff}
+  .btn.purple:hover{filter:brightness(1.1)}
+  .btn.ghost{background:var(--surface2);border-color:var(--border);color:var(--text)}
+  .btn.ghost:hover{border-color:var(--muted)}
+
+  /* SECTION */
+  section{padding:64px 0;border-top:1px solid var(--border)}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+  .sec-head .eyebrow{font-size:13px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+  .sec-head h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.8px;margin:10px 0}
+  .sec-head p{color:var(--muted);font-size:16px}
+
+  /* PRODUCT */
+  .product{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:14px}
+  .product.rev .pinfo{order:2}
+  @media(max-width:840px){.product{grid-template-columns:1fr;gap:26px}.product.rev .pinfo{order:0}}
+  .plogo{display:inline-flex;align-items:center;gap:11px;font-weight:800;font-size:22px;margin-bottom:14px}
+  .plogo .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px;color:#fff}
+  .green-ic{background:linear-gradient(135deg,var(--green),#0ea5e9)}
+  .purple-ic{background:linear-gradient(135deg,var(--purple),var(--purple2))}
+  .pinfo h3{font-size:15px;color:var(--muted);font-weight:700;margin-bottom:14px}
+  .pinfo .lead{font-size:18px;margin-bottom:20px}
+  .flist{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .flist li{display:flex;gap:11px;align-items:flex-start;font-size:15px;color:#cdd6e0}
+  .flist .ck{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+    font-size:13px;font-weight:900;margin-top:1px}
+  .green-ck{background:rgba(34,197,94,.16);color:var(--green)}
+  .purple-ck{background:rgba(109,94,252,.18);color:var(--purple2)}
+  .pvisual{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow)}
+  .pvisual .mock-row{display:flex;align-items:center;gap:12px;padding:13px;border-radius:11px;
+    background:var(--surface2);margin-bottom:10px}
+  .pvisual .mock-row:last-child{margin-bottom:0}
+  .pvisual .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;flex-shrink:0}
+  .pvisual .ml{flex:1;min-width:0}
+  .pvisual .ml b{font-size:14px}
+  .pvisual .ml span{display:block;font-size:12.5px;color:var(--muted)}
+  .pvisual .badge{font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px;white-space:nowrap}
+
+  /* PRICING */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:920px;margin:0 auto}
+  @media(max-width:780px){.price-grid{grid-template-columns:1fr;max-width:420px}}
+  .pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:26px 22px;display:flex;flex-direction:column;position:relative}
+  .pcard.pop{border-color:transparent;box-shadow:var(--shadow)}
+  .pcard.pop.green{box-shadow:0 0 0 2px var(--green),var(--shadow)}
+  .pcard.pop.purple{box-shadow:0 0 0 2px var(--purple),var(--shadow)}
+  .pcard .poptag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    font-size:11px;font-weight:800;padding:5px 13px;border-radius:99px;color:#fff;white-space:nowrap}
+  .green .poptag{background:var(--green2)}
+  .purple .poptag{background:var(--purple)}
+  .pcard .pname{font-size:14px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--muted)}
+  .pcard .amt{font-size:42px;font-weight:900;letter-spacing:-1.5px;margin:10px 0 2px}
+  .pcard .amt span{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:0}
+  .pcard .desc{font-size:13.5px;color:var(--muted);min-height:38px;margin-bottom:18px}
+  .pcard ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px;flex:1}
+  .pcard ul li{display:flex;gap:9px;font-size:14px;color:#cdd6e0}
+  .pcard ul li::before{content:"✓";font-weight:900;color:var(--green)}
+  .purple .pcard ul li::before,.price-grid.purple ul li::before{color:var(--purple2)}
+  .pcard .pbtn{display:block;text-align:center;padding:12px;border-radius:11px;font-weight:800;font-size:14.5px;
+    background:var(--surface2);border:1px solid var(--border);color:var(--text);transition:.15s}
+  .pcard .pbtn:hover{border-color:var(--muted)}
+  .pcard .pbtn.fill-green{background:var(--green);color:#04110a;border-color:transparent}
+  .pcard .pbtn.fill-green:hover{background:var(--green2)}
+  .pcard .pbtn.fill-purple{background:var(--purple);color:#fff;border-color:transparent}
+  .pcard .pbtn.fill-purple:hover{filter:brightness(1.1)}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:0 auto}
+  .faq details{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:4px 20px;margin-bottom:12px}
+  .faq summary{cursor:pointer;font-weight:700;font-size:16px;padding:16px 0;list-style:none;
+    display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:22px;color:var(--muted)}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{color:var(--muted);padding:0 0 18px;font-size:15px}
+
+  /* CONTACT */
+  .contact-card{background:linear-gradient(135deg,rgba(34,197,94,.10),rgba(109,94,252,.12));
+    border:1px solid var(--border);border-radius:var(--radius);padding:48px 30px;text-align:center;max-width:680px;margin:0 auto}
+  .contact-card h2{font-size:28px;letter-spacing:-.6px}
+  .contact-card p{color:var(--muted);margin:12px 0 24px}
+  .contact-card .email{font-size:20px;font-weight:800}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:40px 0;margin-top:20px}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><span class="mark">A</span> Asier Studio</a>
+    <nav class="nav-links">
+      <a href="#citaflow">CitaFlow</a>
+      <a href="#resenaboost">ReseñaBoost</a>
+      <a href="#precios">Precios</a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero" style="border-top:none">
+  <div class="wrap">
+    <span class="tag">Software por suscripción · Hecho en España 🇪🇸</span>
+    <h1>Herramientas web que ayudan a los <b>negocios locales a vender más</b></h1>
+    <p>Creamos software sencillo y asequible para autónomos y pequeños negocios: menos ausencias en las citas y más reseñas de 5 estrellas.</p>
+    <div class="hero-cta">
+      <a href="#citaflow" class="btn green">Ver CitaFlow</a>
+      <a href="#resenaboost" class="btn purple">Ver ReseñaBoost</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CITAFLOW ================= -->
+<section id="citaflow">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--green)">Producto 01</div>
+      <h2>CitaFlow</h2>
+      <p>Mini-CRM con recordatorios de cita por WhatsApp y SMS para negocios con cita previa.</p>
+    </div>
+    <div class="product">
+      <div class="pinfo">
+        <div class="plogo"><span class="ic green-ic">📅</span> CitaFlow</div>
+        <h3>Para peluquerías, fisioterapia, estética, uñas, barberías…</h3>
+        <p class="lead">Reduce las ausencias enviando recordatorios automáticos con el mensaje ya escrito. Tus clientes confirman con un clic.</p>
+        <ul class="flist">
+          <li><span class="ck green-ck">✓</span> Agenda de clientes y citas en un solo sitio</li>
+          <li><span class="ck green-ck">✓</span> Recordatorios por WhatsApp y SMS con plantillas</li>
+          <li><span class="ck green-ck">✓</span> Recordatorio automático 24 h antes de la cita</li>
+          <li><span class="ck green-ck">✓</span> Reactivación de clientes que no vuelven</li>
+          <li><span class="ck green-ck">✓</span> Estadísticas de ausencias y facturación estimada</li>
+        </ul>
+      </div>
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(34,197,94,.16);color:var(--green)">LM</div>
+          <div class="ml"><b>Laura Martín</b><span>Corte y color · Hoy 17:30</span></div>
+          <span class="badge" style="background:rgba(59,130,246,.15);color:#3b82f6">Confirmada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(34,197,94,.16);color:var(--green)">JR</div>
+          <div class="ml"><b>Javier Ruiz</b><span>Fisio · Mañana 10:00</span></div>
+          <span class="badge" style="background:rgba(37,211,102,.15);color:#25D366">Recordado</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(34,197,94,.16);color:var(--green)">SP</div>
+          <div class="ml"><b>Sara Pérez</b><span>Manicura · Vie 12:30</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Pendiente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRECIOS CITAFLOW -->
+    <div class="price-grid" style="margin-top:50px">
+      <div class="pcard green">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Para empezar y probarlo sin tarjeta.</div>
+        <ul>
+          <li>Hasta 15 recordatorios/mes</li>
+          <li>Clientes y citas ilimitados</li>
+          <li>WhatsApp y SMS manuales</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard green pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">19€ <span>/mes</span></div>
+        <div class="desc">Todo lo que necesita un negocio activo.</div>
+        <ul>
+          <li>Recordatorios ilimitados</li>
+          <li>Auto-recordatorio 24 h antes</li>
+          <li>Plantillas editables</li>
+          <li>Reactivación de clientes</li>
+          <li>Estadísticas</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-green">Empezar con Pro</a>
+      </div>
+      <div class="pcard green">
+        <div class="pname">Business</div>
+        <div class="amt">39€ <span>/mes</span></div>
+        <div class="desc">Para varios negocios o equipo.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-negocio</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEÑABOOST ================= -->
+<section id="resenaboost">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--purple2)">Producto 02</div>
+      <h2>ReseñaBoost</h2>
+      <p>Consigue más reseñas de 5★ en Google y respóndelas en segundos con ayuda de IA.</p>
+    </div>
+    <div class="product rev">
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(109,94,252,.18);color:var(--purple2)">★5</div>
+          <div class="ml"><b>Marta G.</b><span>"Trato excelente, repetiré seguro."</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Respondida</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(109,94,252,.18);color:var(--purple2)">★4</div>
+          <div class="ml"><b>Carlos D.</b><span>"Bien, aunque esperé un poco."</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Pendiente</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(109,94,252,.18);color:var(--purple2)">QR</div>
+          <div class="ml"><b>QR de mostrador</b><span>Tus clientes escanean y dejan reseña</span></div>
+          <span class="badge" style="background:rgba(109,94,252,.18);color:var(--purple2)">Activo</span>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="plogo"><span class="ic purple-ic">⭐</span> ReseñaBoost</div>
+        <h3>Para restaurantes, clínicas, tiendas, talleres, hoteles…</h3>
+        <p class="lead">Más reseñas suben tu posición en Google Maps. La IA redacta respuestas con tu tono y tú solo revisas y publicas.</p>
+        <ul class="flist">
+          <li><span class="ck purple-ck">✓</span> Respuestas con IA que detectan tono y temas</li>
+          <li><span class="ck purple-ck">✓</span> Pide reseñas a tus clientes por SMS</li>
+          <li><span class="ck purple-ck">✓</span> Código QR para mostrador y tickets</li>
+          <li><span class="ck purple-ck">✓</span> Centro de alertas de reseñas nuevas</li>
+          <li><span class="ck purple-ck">✓</span> Copia la respuesta y pégala en Google</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRECIOS RESEÑABOOST -->
+    <div class="price-grid purple" style="margin-top:50px">
+      <div class="pcard purple">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Pruébalo con tus primeras reseñas.</div>
+        <ul>
+          <li>3 respuestas con IA/mes</li>
+          <li>5 peticiones por SMS/mes</li>
+          <li>Bandeja de reseñas</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard purple pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">29€ <span>/mes</span></div>
+        <div class="desc">Para negocios que quieren crecer en Google.</div>
+        <ul>
+          <li>Respuestas con IA ilimitadas</li>
+          <li>SMS ilimitados</li>
+          <li>Código QR de mostrador</li>
+          <li>Centro de alertas</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-purple">Empezar con Pro</a>
+      </div>
+      <div class="pcard purple">
+        <div class="pname">Business</div>
+        <div class="amt">79€ <span>/mes</span></div>
+        <div class="desc">Para cadenas o varios locales.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-local</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRECIOS (ancla) / FAQ ================= -->
+<section id="precios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--muted)">Preguntas frecuentes</div>
+      <h2>Todo lo que necesitas saber</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>¿Cómo funciona la suscripción?</summary>
+        <p>Es un pago mensual recurrente que puedes cancelar cuando quieras. Empiezas con el plan Free sin tarjeta y subes a Pro cuando lo necesites.</p>
+      </details>
+      <details>
+        <summary>¿Necesito conocimientos técnicos?</summary>
+        <p>No. Las herramientas funcionan desde el navegador, sin instalar nada. En minutos tienes tu cuenta lista.</p>
+      </details>
+      <details>
+        <summary>¿Puedo cancelar en cualquier momento?</summary>
+        <p>Sí. Gestionas tu suscripción tú mismo y la cancelas con un clic. Sin permanencia.</p>
+      </details>
+      <details>
+        <summary>¿Los precios incluyen IVA?</summary>
+        <p>Los precios mostrados son sin IVA. En la factura se aplica el IVA correspondiente según la normativa española.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact-card">
+      <h2>¿Hablamos?</h2>
+      <p>Escríbenos para empezar, resolver dudas o contratar un plan. Respondemos rápido.</p>
+      <div class="email"><a href="mailto:asierfernandezallende@gmail.com">asierfernandezallende@gmail.com</a></div>
+      <div style="margin-top:24px">
+        <a href="mailto:asierfernandezallende@gmail.com" class="btn ghost">Enviar un email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© <span id="yr"></span> Asier Studio · Software para negocios locales · España</div>
+    <div class="foot-links">
+      <a href="#citaflow">CitaFlow</a>
+      <a href="#resenaboost">ReseñaBoost</a>
+      <a href="terminos.html">Términos</a>
+      <a href="privacidad.html">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
