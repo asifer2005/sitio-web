@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Software para autónomos y negocios locales — CitaFlow y ReseñaBoost</title>
-<meta name="description" content="Herramientas web por suscripción para pequeños negocios en España: recordatorios de cita por WhatsApp/SMS (CitaFlow) y gestión de reseñas de Google con IA (ReseñaBoost).">
+<title>Asier Studio — Software para autónomos y negocios locales</title>
+<meta name="description" content="Cinco herramientas web por suscripción para pequeños negocios en España, todas con demo en vivo: recordatorios de cita (CitaFlow), reseñas de Google con IA (ReseñaBoost), presupuestos profesionales (PresuPro), reservas para casas rurales (CasaDirecta) y dashboard de métricas (PulsoBar).">
 <style>
   :root{
     --bg:#0d0f14; --surface:#151a21; --surface2:#1d242d; --border:#2a323c;
@@ -143,6 +143,26 @@
   .foot-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap}
   .foot-links a:hover{color:var(--text)}
+
+  /* PROYECTOS GRID */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:840px){.proj-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.proj-grid{grid-template-columns:1fr}}
+  .proj-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:24px;display:flex;flex-direction:column;transition:.16s}
+  .proj-card:hover{border-color:var(--muted);transform:translateY(-3px);box-shadow:var(--shadow)}
+  .proj-card .pc-ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
+    font-size:23px;color:#fff;margin-bottom:14px}
+  .proj-card h3{font-size:19px;letter-spacing:-.3px;margin-bottom:3px}
+  .proj-card .pc-tag{font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:12px}
+  .proj-card p{font-size:14px;color:#cdd6e0;flex:1;margin-bottom:18px}
+  .proj-card .pc-links{display:flex;gap:10px}
+  .proj-card .pc-links a{flex:1;text-align:center;padding:10px;border-radius:10px;font-weight:800;
+    font-size:13.5px;transition:.15s}
+  .pc-demo{background:var(--purple);color:#fff}
+  .pc-demo:hover{filter:brightness(1.12)}
+  .pc-code{background:var(--surface2);border:1px solid var(--border);color:var(--text)}
+  .pc-code:hover{border-color:var(--muted)}
 </style>
 </head>
 <body>
@@ -151,9 +171,9 @@
   <div class="wrap nav-in">
     <a href="#top" class="brand"><span class="mark">A</span> Asier Studio</a>
     <nav class="nav-links">
+      <a href="#proyectos">Proyectos</a>
       <a href="#citaflow">CitaFlow</a>
       <a href="#resenaboost">ReseñaBoost</a>
-      <a href="#precios">Precios</a>
       <a href="#contacto" class="nav-cta">Contacto</a>
     </nav>
   </div>
@@ -164,10 +184,79 @@
   <div class="wrap">
     <span class="tag">Software por suscripción · Hecho en España 🇪🇸</span>
     <h1>Herramientas web que ayudan a los <b>negocios locales a vender más</b></h1>
-    <p>Creamos software sencillo y asequible para autónomos y pequeños negocios: menos ausencias en las citas y más reseñas de 5 estrellas.</p>
+    <p>Software sencillo y asequible para autónomos y pequeños negocios. <b>Cinco productos, todos con demo en vivo</b> que puedes probar ahora mismo en el navegador.</p>
     <div class="hero-cta">
-      <a href="#citaflow" class="btn green">Ver CitaFlow</a>
-      <a href="#resenaboost" class="btn purple">Ver ReseñaBoost</a>
+      <a href="#proyectos" class="btn green">Ver los proyectos</a>
+      <a href="#contacto" class="btn ghost">Contacto</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROYECTOS ================= -->
+<section id="proyectos" style="border-top:none;padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--purple2)">Portfolio</div>
+      <h2>Cinco productos, todos funcionando</h2>
+      <p>Cada uno es una aplicación web real con su demo en vivo. Pruébalas: funcionan en el navegador, sin instalar nada.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,var(--green),#0ea5e9)">📅</div>
+        <h3>CitaFlow</h3>
+        <div class="pc-tag">Recordatorios de cita</div>
+        <p>Mini-CRM con recordatorios por WhatsApp y SMS para autónomos con cita previa. Menos ausencias, más facturación.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/citaflow/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/citaflow" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,var(--purple),var(--purple2))">⭐</div>
+        <h3>ReseñaBoost</h3>
+        <div class="pc-tag">Reseñas de Google con IA</div>
+        <p>Consigue más reseñas de 5★ y respóndelas en segundos con IA. Peticiones por SMS y QR para mostrador.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/resenaboost/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/resenaboost" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#3b82f6,#6d5efc)">🧾</div>
+        <h3>PresuPro</h3>
+        <div class="pc-tag">Presupuestos profesionales</div>
+        <p>Presupuestos con aspecto de marca, exportación a PDF, aceptación online y seguimiento del estado de cada uno.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/presupro/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/presupro" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#10b981,#f59e0b)">🏡</div>
+        <h3>CasaDirecta</h3>
+        <div class="pc-tag">Reservas para casas rurales</div>
+        <p>Web + calendario de reservas directas sin comisión de Booking/Airbnb, con detección anti doble-booking.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/casadirecta/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/casadirecta" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">📊</div>
+        <h3>PulsoBar</h3>
+        <div class="pc-tag">Dashboard de métricas</div>
+        <p>Instagram, Google y ventas en una sola pantalla para bares y restaurantes, con gráficos e insights automáticos.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/pulsobar/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/pulsobar" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -192,6 +281,7 @@
           <li><span class="ck green-ck">✓</span> Reactivación de clientes que no vuelven</li>
           <li><span class="ck green-ck">✓</span> Estadísticas de ausencias y facturación estimada</li>
         </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/citaflow/" target="_blank" rel="noopener" class="btn green">Ver demo en vivo →</a></div>
       </div>
       <div class="pvisual">
         <div class="mock-row">
@@ -291,6 +381,7 @@
           <li><span class="ck purple-ck">✓</span> Centro de alertas de reseñas nuevas</li>
           <li><span class="ck purple-ck">✓</span> Copia la respuesta y pégala en Google</li>
         </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/resenaboost/" target="_blank" rel="noopener" class="btn purple">Ver demo en vivo →</a></div>
       </div>
     </div>
 
@@ -381,8 +472,8 @@
   <div class="wrap foot-in">
     <div>© <span id="yr"></span> Asier Studio · Software para negocios locales · España</div>
     <div class="foot-links">
-      <a href="#citaflow">CitaFlow</a>
-      <a href="#resenaboost">ReseñaBoost</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="https://github.com/asifer2005" target="_blank" rel="noopener">GitHub</a>
       <a href="terminos.html">Términos</a>
       <a href="privacidad.html">Privacidad</a>
     </div>
