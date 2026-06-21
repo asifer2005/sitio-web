@@ -163,6 +163,26 @@
   .pc-demo:hover{filter:brightness(1.12)}
   .pc-code{background:var(--surface2);border:1px solid var(--border);color:var(--text)}
   .pc-code:hover{border-color:var(--muted)}
+
+  /* ACENTOS EXTRA (PresuPro azul · CasaDirecta turquesa · PulsoBar ámbar) */
+  .btn.blue{background:#3b82f6;color:#fff}     .btn.blue:hover{filter:brightness(1.1)}
+  .btn.teal{background:#14b8a6;color:#04130f}  .btn.teal:hover{filter:brightness(1.08)}
+  .btn.amber{background:#f59e0b;color:#231a04} .btn.amber:hover{filter:brightness(1.08)}
+  .blue-ck{background:rgba(59,130,246,.16);color:#3b82f6}
+  .teal-ck{background:rgba(20,184,166,.16);color:#14b8a6}
+  .amber-ck{background:rgba(245,158,11,.16);color:#f59e0b}
+  .pcard.pop.blue{box-shadow:0 0 0 2px #3b82f6,var(--shadow)}
+  .pcard.pop.teal{box-shadow:0 0 0 2px #14b8a6,var(--shadow)}
+  .pcard.pop.amber{box-shadow:0 0 0 2px #f59e0b,var(--shadow)}
+  .blue .poptag{background:#2563eb}
+  .teal .poptag{background:#0d9488}
+  .amber .poptag{background:#d97706}
+  .price-grid.blue ul li::before{color:#3b82f6}
+  .price-grid.teal ul li::before{color:#14b8a6}
+  .price-grid.amber ul li::before{color:#f59e0b}
+  .pbtn.fill-blue{background:#3b82f6;color:#fff;border-color:transparent}    .pbtn.fill-blue:hover{filter:brightness(1.1)}
+  .pbtn.fill-teal{background:#14b8a6;color:#04130f;border-color:transparent} .pbtn.fill-teal:hover{filter:brightness(1.08)}
+  .pbtn.fill-amber{background:#f59e0b;color:#231a04;border-color:transparent}.pbtn.fill-amber:hover{filter:brightness(1.08)}
 </style>
 </head>
 <body>
@@ -418,6 +438,256 @@
         <ul>
           <li>Todo lo de Pro</li>
           <li>Multi-local</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESUPRO ================= -->
+<section id="presupro">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#3b82f6">Producto 03</div>
+      <h2>PresuPro</h2>
+      <p>Presupuestos profesionales con tu marca, exportación a PDF, aceptación online y seguimiento del estado.</p>
+    </div>
+    <div class="product">
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#3b82f6,#6d5efc)">🧾</span> PresuPro</div>
+        <h3>Para reformas, instaladores, freelances, agencias, consultores…</h3>
+        <p class="lead">Crea presupuestos con tu logo y colores en minutos, envíalos y sabe al instante si el cliente los ha visto y aceptado.</p>
+        <ul class="flist">
+          <li><span class="ck blue-ck">✓</span> Líneas con cantidades, descuentos e IVA y totales automáticos</li>
+          <li><span class="ck blue-ck">✓</span> Documento con tu marca, exportable a PDF</li>
+          <li><span class="ck blue-ck">✓</span> Numeración automática y datos fiscales (IVA 21/10/0 %)</li>
+          <li><span class="ck blue-ck">✓</span> Aceptación y firma online del cliente por enlace</li>
+          <li><span class="ck blue-ck">✓</span> Seguimiento (enviado → visto → aceptado) y conversión a factura</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/presupro/" target="_blank" rel="noopener" class="btn blue">Ver demo en vivo →</a></div>
+      </div>
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(59,130,246,.16);color:#3b82f6">#14</div>
+          <div class="ml"><b>Reforma baño completo</b><span>Presupuesto · 1.250 €</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Aceptado</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(59,130,246,.16);color:#3b82f6">#13</div>
+          <div class="ml"><b>Instalación aire acond.</b><span>Presupuesto · 890 €</span></div>
+          <span class="badge" style="background:rgba(59,130,246,.15);color:#3b82f6">Visto</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(59,130,246,.16);color:#3b82f6">#12</div>
+          <div class="ml"><b>Diseño web tienda</b><span>Presupuesto · 2.400 €</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Enviado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRECIOS PRESUPRO -->
+    <div class="price-grid blue" style="margin-top:50px">
+      <div class="pcard blue">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Para empezar sin tarjeta.</div>
+        <ul>
+          <li>5 presupuestos/mes</li>
+          <li>Exportar a PDF</li>
+          <li>Seguimiento básico</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard blue pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">15€ <span>/mes</span></div>
+        <div class="desc">Para facturar con buena imagen.</div>
+        <ul>
+          <li>Presupuestos ilimitados</li>
+          <li>Logo y colores de marca</li>
+          <li>Aceptación y firma online</li>
+          <li>Recordatorios de seguimiento</li>
+          <li>Conversión a factura</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-blue">Empezar con Pro</a>
+      </div>
+      <div class="pcard blue">
+        <div class="pname">Business</div>
+        <div class="amt">29€ <span>/mes</span></div>
+        <div class="desc">Para equipos y más volumen.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Plantillas múltiples</li>
+          <li>Sin marca de agua</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASADIRECTA ================= -->
+<section id="casadirecta">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#14b8a6">Producto 04</div>
+      <h2>CasaDirecta</h2>
+      <p>Web + reservas directas para casas rurales: cada reserva que no pasa por las OTAs te ahorra su comisión.</p>
+    </div>
+    <div class="product rev">
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(20,184,166,.16);color:#14b8a6">🏡</div>
+          <div class="ml"><b>Casa El Roble</b><span>12–15 jul · 3 noches · 540 €</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Confirmada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(20,184,166,.16);color:#14b8a6">🏡</div>
+          <div class="ml"><b>Apartamento Centro</b><span>20–22 jul · 2 noches · 260 €</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Solicitada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(34,197,94,.16);color:var(--green)">€</div>
+          <div class="ml"><b>Comisión ahorrada</b><span>Este mes, sin pasar por OTAs</span></div>
+          <span class="badge" style="background:rgba(20,184,166,.16);color:#14b8a6">+ 96 €</span>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#14b8a6,#10b981)">🏡</span> CasaDirecta</div>
+        <h3>Para casas rurales, apartamentos turísticos y alojamientos pequeños.</h3>
+        <p class="lead">Tu propia web de reservas directas con calendario antidoble-reserva. Recupera el 15-18 % que hoy te llevan Booking y Airbnb.</p>
+        <ul class="flist">
+          <li><span class="ck teal-ck">✓</span> Mini-web pública con galería, servicios y precios por temporada</li>
+          <li><span class="ck teal-ck">✓</span> Calendario de disponibilidad con anti doble-booking</li>
+          <li><span class="ck teal-ck">✓</span> Precio de la estancia calculado automáticamente</li>
+          <li><span class="ck teal-ck">✓</span> Cobro de señal y gestión de reservas por estado</li>
+          <li><span class="ck teal-ck">✓</span> Sincronización iCal con Booking/Airbnb</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/casadirecta/" target="_blank" rel="noopener" class="btn teal">Ver demo en vivo →</a></div>
+      </div>
+    </div>
+
+    <!-- PRECIOS CASADIRECTA -->
+    <div class="price-grid teal" style="margin-top:50px">
+      <div class="pcard teal">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Prueba con un alojamiento.</div>
+        <ul>
+          <li>1 alojamiento</li>
+          <li>Calendario y reservas</li>
+          <li>Web pública con marca CasaDirecta</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard teal pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">29€ <span>/mes</span></div>
+        <div class="desc">Para vender reservas directas.</div>
+        <ul>
+          <li>Web sin marca de agua</li>
+          <li>Cobro de señal</li>
+          <li>Sincronización iCal</li>
+          <li>Mensajes automáticos al huésped</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-teal">Empezar con Pro</a>
+      </div>
+      <div class="pcard teal">
+        <div class="pname">Business</div>
+        <div class="amt">49€ <span>/mes</span></div>
+        <div class="desc">Para varios alojamientos.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-alojamiento</li>
+          <li>Dominio propio</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PULSOBAR ================= -->
+<section id="pulsobar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#f59e0b">Producto 05</div>
+      <h2>PulsoBar</h2>
+      <p>Dashboard de métricas unificado: Instagram, Google y ventas en una sola pantalla para tu bar o restaurante.</p>
+    </div>
+    <div class="product">
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">📊</span> PulsoBar</div>
+        <h3>Para bares, restaurantes, cafeterías y pequeñas cadenas.</h3>
+        <p class="lead">Deja de saltar entre Instagram, Google y el Excel de ventas. Todo en un panel con gráficos e insights que te dicen qué mueve el negocio.</p>
+        <ul class="flist">
+          <li><span class="ck amber-ck">✓</span> Instagram, Google y ventas unificados en un panel</li>
+          <li><span class="ck amber-ck">✓</span> Gráficos de evolución y comparativa entre periodos</li>
+          <li><span class="ck amber-ck">✓</span> Insights automáticos (qué sube o baja tus ventas)</li>
+          <li><span class="ck amber-ck">✓</span> Objetivo de ventas y centro de alertas</li>
+          <li><span class="ck amber-ck">✓</span> Entrada manual o conexión automática a las APIs</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/pulsobar/" target="_blank" rel="noopener" class="btn amber">Ver demo en vivo →</a></div>
+      </div>
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(245,158,11,.16);color:#f59e0b">€</div>
+          <div class="ml"><b>Ventas · esta semana</b><span>4.820 €</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">+12%</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(109,94,252,.18);color:var(--purple2)">IG</div>
+          <div class="ml"><b>Instagram</b><span>2.340 seguidores</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">+85</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(59,130,246,.15);color:#3b82f6">★</div>
+          <div class="ml"><b>Google</b><span>128 reseñas</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">4,6 ★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRECIOS PULSOBAR -->
+    <div class="price-grid amber" style="margin-top:50px">
+      <div class="pcard amber">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Empieza con tus datos.</div>
+        <ul>
+          <li>Panel unificado</li>
+          <li>2 meses de histórico</li>
+          <li>Entrada manual de datos</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard amber pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">29€ <span>/mes</span></div>
+        <div class="desc">Para decidir con datos.</div>
+        <ul>
+          <li>Histórico ilimitado</li>
+          <li>Conexión automática IG/Google</li>
+          <li>Informe en PDF</li>
+          <li>Alertas automáticas</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-amber">Empezar con Pro</a>
+      </div>
+      <div class="pcard amber">
+        <div class="pname">Business</div>
+        <div class="amt">69€ <span>/mes</span></div>
+        <div class="desc">Para varios locales.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-local</li>
+          <li>Comparativa con el sector</li>
           <li>Soporte prioritario</li>
         </ul>
         <a href="#contacto" class="pbtn">Hablar con ventas</a>
