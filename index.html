@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asier Studio — Software para autónomos y negocios locales</title>
-<meta name="description" content="Cinco herramientas web por suscripción para pequeños negocios en España, todas con demo en vivo: recordatorios de cita (CitaFlow), reseñas de Google con IA (ReseñaBoost), presupuestos profesionales (PresuPro), reservas para casas rurales (CasaDirecta) y dashboard de métricas (PulsoBar).">
+<meta name="description" content="Diez herramientas web por suscripción para pequeños negocios en España: recordatorios de cita (CitaFlow), reseñas de Google con IA (ReseñaBoost), presupuestos (PresuPro), reservas para casas rurales (CasaDirecta), dashboard de métricas (PulsoBar), contratos legales (ContratoYA), facturas con IVA/IRPF (FacturaSimple), carta digital por QR (CartaViva), control de no-shows (CitaSegura) y filtro de opiniones (OpinaLocal).">
 <style>
   :root{
     --bg:#0d0f14; --surface:#151a21; --surface2:#1d242d; --border:#2a323c;
@@ -183,6 +183,39 @@
   .pbtn.fill-blue{background:#3b82f6;color:#fff;border-color:transparent}    .pbtn.fill-blue:hover{filter:brightness(1.1)}
   .pbtn.fill-teal{background:#14b8a6;color:#04130f;border-color:transparent} .pbtn.fill-teal:hover{filter:brightness(1.08)}
   .pbtn.fill-amber{background:#f59e0b;color:#231a04;border-color:transparent}.pbtn.fill-amber:hover{filter:brightness(1.08)}
+
+  /* ACENTOS APPS NUEVAS (ContratoYA indigo · FacturaSimple cian · CartaViva rosa · CitaSegura pink · OpinaLocal violeta) */
+  .btn.indigo{background:#6366f1;color:#fff}.btn.indigo:hover{filter:brightness(1.1)}
+  .btn.cyan{background:#06b6d4;color:#04161a}.btn.cyan:hover{filter:brightness(1.08)}
+  .btn.rose{background:#f43f5e;color:#fff}.btn.rose:hover{filter:brightness(1.1)}
+  .btn.pink{background:#ec4899;color:#fff}.btn.pink:hover{filter:brightness(1.1)}
+  .btn.violet{background:#8b5cf6;color:#fff}.btn.violet:hover{filter:brightness(1.1)}
+  .indigo-ck{background:rgba(99,102,241,.16);color:#818cf8}
+  .cyan-ck{background:rgba(6,182,212,.16);color:#06b6d4}
+  .rose-ck{background:rgba(244,63,94,.16);color:#fb7185}
+  .pink-ck{background:rgba(236,72,153,.16);color:#f472b6}
+  .violet-ck{background:rgba(139,92,246,.16);color:#a78bfa}
+  .pcard.pop.indigo{box-shadow:0 0 0 2px #6366f1,var(--shadow)}
+  .pcard.pop.cyan{box-shadow:0 0 0 2px #06b6d4,var(--shadow)}
+  .pcard.pop.rose{box-shadow:0 0 0 2px #f43f5e,var(--shadow)}
+  .pcard.pop.pink{box-shadow:0 0 0 2px #ec4899,var(--shadow)}
+  .pcard.pop.violet{box-shadow:0 0 0 2px #8b5cf6,var(--shadow)}
+  .indigo .poptag{background:#4f46e5}
+  .cyan .poptag{background:#0891b2}
+  .rose .poptag{background:#e11d48}
+  .pink .poptag{background:#db2777}
+  .violet .poptag{background:#7c3aed}
+  .price-grid.indigo ul li::before{color:#818cf8}
+  .price-grid.cyan ul li::before{color:#06b6d4}
+  .price-grid.rose ul li::before{color:#fb7185}
+  .price-grid.pink ul li::before{color:#f472b6}
+  .price-grid.violet ul li::before{color:#a78bfa}
+  .pbtn.fill-indigo{background:#6366f1;color:#fff;border-color:transparent}.pbtn.fill-indigo:hover{filter:brightness(1.1)}
+  .pbtn.fill-cyan{background:#06b6d4;color:#04161a;border-color:transparent}.pbtn.fill-cyan:hover{filter:brightness(1.08)}
+  .pbtn.fill-rose{background:#f43f5e;color:#fff;border-color:transparent}.pbtn.fill-rose:hover{filter:brightness(1.1)}
+  .pbtn.fill-pink{background:#ec4899;color:#fff;border-color:transparent}.pbtn.fill-pink:hover{filter:brightness(1.1)}
+  .pbtn.fill-violet{background:#8b5cf6;color:#fff;border-color:transparent}.pbtn.fill-violet:hover{filter:brightness(1.1)}
+
 </style>
 </head>
 <body>
@@ -204,7 +237,7 @@
   <div class="wrap">
     <span class="tag">Software por suscripción · Hecho en España 🇪🇸</span>
     <h1>Herramientas web que ayudan a los <b>negocios locales a vender más</b></h1>
-    <p>Software sencillo y asequible para autónomos y pequeños negocios. <b>Cinco productos, todos con demo en vivo</b> que puedes probar ahora mismo en el navegador.</p>
+    <p>Software sencillo y asequible para autónomos y pequeños negocios. <b>Diez productos</b>, los diez con demo en vivo que puedes probar ahora mismo.</p>
     <div class="hero-cta">
       <a href="#proyectos" class="btn green">Ver los proyectos</a>
       <a href="#contacto" class="btn ghost">Contacto</a>
@@ -217,8 +250,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow" style="color:var(--purple2)">Portfolio</div>
-      <h2>Cinco productos, todos funcionando</h2>
-      <p>Cada uno es una aplicación web real con su demo en vivo. Pruébalas: funcionan en el navegador, sin instalar nada.</p>
+      <h2>Diez productos para negocios locales</h2>
+      <p>Cada uno es una aplicación web real, con demo en vivo que puedes probar ahora mismo desde el navegador.</p>
     </div>
     <div class="proj-grid">
 
@@ -274,6 +307,61 @@
         <div class="pc-links">
           <a class="pc-demo" href="https://asifer2005.github.io/pulsobar/" target="_blank" rel="noopener">Ver demo</a>
           <a class="pc-code" href="https://github.com/asifer2005/pulsobar" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">📝</div>
+        <h3>ContratoYA</h3>
+        <div class="pc-tag">Contratos legales</div>
+        <p>Contratos y documentos legales listos para firmar para freelancers y pymes, con redacción asistida por IA y firma online.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/contratoya/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/contratoya" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">📄</div>
+        <h3>FacturaSimple</h3>
+        <div class="pc-tag">Facturas, IVA e IRPF</div>
+        <p>Facturas legales con IVA e IRPF calculados, numeración correcta y resúmenes trimestrales listos para tu gestoría.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/facturasimple/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/facturasimple" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#f43f5e,#fb7185)">🍽️</div>
+        <h3>CartaViva</h3>
+        <div class="pc-tag">Carta digital por QR</div>
+        <p>Carta por QR que tus clientes ven en la mesa y que actualizas al instante, con fotos, alérgenos e idiomas. Sin reimprimir.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/cartaviva/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/cartaviva" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#ec4899,#f472b6)">🛡️</div>
+        <h3>CitaSegura</h3>
+        <div class="pc-tag">Control de no-shows</div>
+        <p>Reduce las ausencias con confirmaciones por WhatsApp, lista de espera automática y señal anti no-show para llenar la agenda.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/citasegura/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/citasegura" target="_blank" rel="noopener">Código</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-ic" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">🎯</div>
+        <h3>OpinaLocal</h3>
+        <div class="pc-tag">Filtro de opiniones (NPS)</div>
+        <p>Capta la queja en privado antes de que sea una mala reseña pública y lleva a los clientes contentos directos a Google.</p>
+        <div class="pc-links">
+          <a class="pc-demo" href="https://asifer2005.github.io/opinalocal/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="pc-code" href="https://github.com/asifer2005/opinalocal" target="_blank" rel="noopener">Código</a>
         </div>
       </div>
 
@@ -688,6 +776,419 @@
           <li>Todo lo de Pro</li>
           <li>Multi-local</li>
           <li>Comparativa con el sector</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTRATOYA ================= -->
+<section id="contratoya">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#818cf8">Producto 06 · Nuevo</div>
+      <h2>ContratoYA</h2>
+      <p>Contratos y documentos legales listos para firmar, para freelancers y pymes.</p>
+    </div>
+    <div class="product rev">
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(99,102,241,.16);color:#818cf8">📝</div>
+          <div class="ml"><b>Contrato de servicios</b><span>Freelance · diseño web</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Firmado</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(99,102,241,.16);color:#818cf8">🔒</div>
+          <div class="ml"><b>Acuerdo de confidencialidad</b><span>NDA · enviado al cliente</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Pendiente firma</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(99,102,241,.16);color:#818cf8">🏠</div>
+          <div class="ml"><b>Contrato de alquiler</b><span>Generado con IA</span></div>
+          <span class="badge" style="background:rgba(99,102,241,.18);color:#818cf8">Borrador</span>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">📝</span> ContratoYA</div>
+        <h3>Para freelancers, agencias, pymes y autónomos.</h3>
+        <p class="lead">Genera contratos correctos en minutos a partir de plantillas, con redacción asistida por IA, y fírmalos online por enlace sin imprimir nada.</p>
+        <ul class="flist">
+          <li><span class="ck indigo-ck">✓</span> Plantillas listas: servicios, NDA, alquiler, colaboración…</li>
+          <li><span class="ck indigo-ck">✓</span> Redacción avanzada con IA que adapta el clausulado</li>
+          <li><span class="ck indigo-ck">✓</span> Firma online por enlace, sin papel ni escáner</li>
+          <li><span class="ck indigo-ck">✓</span> Exportación a PDF y copia rápida del texto</li>
+          <li><span class="ck indigo-ck">✓</span> Documentos ilimitados y sin marca de agua en Pro</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/contratoya/" target="_blank" rel="noopener" class="btn indigo">Ver demo en vivo →</a></div>
+      </div>
+    </div>
+
+    <!-- PRECIOS CONTRATOYA -->
+    <div class="price-grid indigo" style="margin-top:50px">
+      <div class="pcard indigo">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Para probarlo sin tarjeta.</div>
+        <ul>
+          <li>Documentos limitados/mes</li>
+          <li>3 plantillas básicas</li>
+          <li>Exportar a PDF (con marca)</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard indigo pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">19€ <span>/mes</span></div>
+        <div class="desc">Para trabajar con contratos serios.</div>
+        <ul>
+          <li>Documentos ilimitados</li>
+          <li>Todas las plantillas (6)</li>
+          <li>Redacción avanzada con IA</li>
+          <li>Firma online por enlace</li>
+          <li>PDF sin marca de agua</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-indigo">Empezar con Pro</a>
+      </div>
+      <div class="pcard indigo">
+        <div class="pname">Business</div>
+        <div class="amt">39€ <span>/mes</span></div>
+        <div class="desc">Para equipos y más volumen.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Varios usuarios del equipo</li>
+          <li>Acceso por API</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACTURASIMPLE ================= -->
+<section id="facturasimple">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#06b6d4">Producto 07 · Nuevo</div>
+      <h2>FacturaSimple</h2>
+      <p>Facturas legales con IVA e IRPF calculados y resúmenes listos para tu gestoría.</p>
+    </div>
+    <div class="product">
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">📄</span> FacturaSimple</div>
+        <h3>Para autónomos y pequeños negocios en España.</h3>
+        <p class="lead">Emite facturas correctas con numeración legal, IVA e IRPF automáticos, y ten siempre listo el resumen trimestral para Hacienda.</p>
+        <ul class="flist">
+          <li><span class="ck cyan-ck">✓</span> Cálculo automático de IVA e IRPF</li>
+          <li><span class="ck cyan-ck">✓</span> Numeración legal y gestión de clientes</li>
+          <li><span class="ck cyan-ck">✓</span> PDF profesional sin marca de agua</li>
+          <li><span class="ck cyan-ck">✓</span> Resumen trimestral de los modelos 303 y 130</li>
+          <li><span class="ck cyan-ck">✓</span> Captura de tickets por foto y exportación para gestoría</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/facturasimple/" target="_blank" rel="noopener" class="btn cyan">Ver demo en vivo →</a></div>
+      </div>
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(6,182,212,.16);color:#06b6d4">#14</div>
+          <div class="ml"><b>Factura 2025-014</b><span>Cliente Pérez S.L. · 1.210 €</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Cobrada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(6,182,212,.16);color:#06b6d4">303</div>
+          <div class="ml"><b>IVA repercutido · T2</b><span>Resumen trimestral</span></div>
+          <span class="badge" style="background:rgba(6,182,212,.18);color:#06b6d4">847 €</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(6,182,212,.16);color:#06b6d4">#13</div>
+          <div class="ml"><b>Factura 2025-013</b><span>Cliente Gómez · 480 €</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Enviada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRECIOS FACTURASIMPLE -->
+    <div class="price-grid cyan" style="margin-top:50px">
+      <div class="pcard cyan">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Para empezar a facturar ya.</div>
+        <ul>
+          <li>Facturas limitadas/mes</li>
+          <li>Cálculo de IVA e IRPF</li>
+          <li>Numeración legal y clientes</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard cyan pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">12€ <span>/mes</span></div>
+        <div class="desc">Para autónomos en activo.</div>
+        <ul>
+          <li>Facturas ilimitadas</li>
+          <li>PDF profesional sin marca</li>
+          <li>Resumen trimestral 303/130</li>
+          <li>Captura de tickets por foto</li>
+          <li>Exportación para gestoría</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-cyan">Empezar con Pro</a>
+      </div>
+      <div class="pcard cyan">
+        <div class="pname">Business</div>
+        <div class="amt">19€ <span>/mes</span></div>
+        <div class="desc">Para más actividad y volumen.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-actividad / multi-serie</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARTAVIVA ================= -->
+<section id="cartaviva">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#fb7185">Producto 08 · Nuevo</div>
+      <h2>CartaViva</h2>
+      <p>Carta digital por QR que actualizas al instante, sin reimprimir nada.</p>
+    </div>
+    <div class="product rev">
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(244,63,94,.16);color:#fb7185">QR</div>
+          <div class="ml"><b>Carta · Mesa 4</b><span>32 platos · escaneo activo</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Publicada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(244,63,94,.16);color:#fb7185">🌐</div>
+          <div class="ml"><b>Menú del día</b><span>Disponible en 3 idiomas</span></div>
+          <span class="badge" style="background:rgba(244,63,94,.18);color:#fb7185">ES · EN · FR</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(244,63,94,.16);color:#fb7185">🍽️</div>
+          <div class="ml"><b>Plato más visto</b><span>Solomillo al pedro ximénez</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">142 vistas</span>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#f43f5e,#fb7185)">🍽️</span> CartaViva</div>
+        <h3>Para bares, restaurantes, cafeterías y food trucks.</h3>
+        <p class="lead">Tus clientes escanean un QR en la mesa y ven tu carta siempre actualizada, con fotos, alérgenos e idiomas. La cambias en segundos.</p>
+        <ul class="flist">
+          <li><span class="ck rose-ck">✓</span> Carta por QR a pantalla completa, un QR por mesa</li>
+          <li><span class="ck rose-ck">✓</span> Platos ilimitados con foto, precio y alérgenos</li>
+          <li><span class="ck rose-ck">✓</span> Varios idiomas para clientes internacionales</li>
+          <li><span class="ck rose-ck">✓</span> Actualización al instante, sin reimprimir cartas</li>
+          <li><span class="ck rose-ck">✓</span> Sin comisiones por pedido: tu carta es tuya</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/cartaviva/" target="_blank" rel="noopener" class="btn rose">Ver demo en vivo →</a></div>
+      </div>
+    </div>
+
+    <!-- PRECIOS CARTAVIVA -->
+    <div class="price-grid rose" style="margin-top:50px">
+      <div class="pcard rose">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Prueba tu carta por QR.</div>
+        <ul>
+          <li>Carta por QR a pantalla completa</li>
+          <li>Platos con foto y alérgenos</li>
+          <li>Con marca CartaViva</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard rose pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">12€ <span>/mes</span></div>
+        <div class="desc">Para tener tu carta a punto siempre.</div>
+        <ul>
+          <li>Platos ilimitados</li>
+          <li>Varios idiomas</li>
+          <li>QR por mesa y sin marca</li>
+          <li>Actualización al instante</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-rose">Empezar con Pro</a>
+      </div>
+      <div class="pcard rose">
+        <div class="pname">Business</div>
+        <div class="amt">24€ <span>/mes</span></div>
+        <div class="desc">Para varios locales.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-local</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CITASEGURA ================= -->
+<section id="citasegura">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#f472b6">Producto 09 · Nuevo</div>
+      <h2>CitaSegura</h2>
+      <p>Menos ausencias y agenda llena: confirmaciones, lista de espera y señal anti no-show.</p>
+    </div>
+    <div class="product">
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#ec4899,#f472b6)">🛡️</span> CitaSegura</div>
+        <h3>Para clínicas, peluquerías, estética y consultas.</h3>
+        <p class="lead">Confirma las citas por WhatsApp, rellena los huecos con lista de espera automática y cobra una señal para que los clientes no falten.</p>
+        <ul class="flist">
+          <li><span class="ck pink-ck">✓</span> Confirmaciones por WhatsApp/SMS ya escritas</li>
+          <li><span class="ck pink-ck">✓</span> Lista de espera automática que rellena huecos</li>
+          <li><span class="ck pink-ck">✓</span> Señal anti no-show para asegurar la cita</li>
+          <li><span class="ck pink-ck">✓</span> Panel de no-shows y dinero recuperado</li>
+          <li><span class="ck pink-ck">✓</span> Envío por lotes y varios profesionales en Pro</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/citasegura/" target="_blank" rel="noopener" class="btn pink">Ver demo en vivo →</a></div>
+      </div>
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(236,72,153,.16);color:#f472b6">ML</div>
+          <div class="ml"><b>María López</b><span>Hoy 18:00 · revisión</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">Confirmada</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(236,72,153,.16);color:#f472b6">⏳</div>
+          <div class="ml"><b>Lista de espera</b><span>3 clientes listos para entrar</span></div>
+          <span class="badge" style="background:rgba(236,72,153,.18);color:#f472b6">Auto</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(34,197,94,.16);color:var(--green)">€</div>
+          <div class="ml"><b>Señal cobrada</b><span>Anti no-show · esta semana</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">+ 90 €</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRECIOS CITASEGURA -->
+    <div class="price-grid pink" style="margin-top:50px">
+      <div class="pcard pink">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Para empezar a confirmar citas.</div>
+        <ul>
+          <li>Confirmaciones limitadas/mes</li>
+          <li>WhatsApp/SMS pre-escrito</li>
+          <li>Lista de espera básica</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard pink pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">19€ <span>/mes</span></div>
+        <div class="desc">Para llenar la agenda de verdad.</div>
+        <ul>
+          <li>Confirmaciones ilimitadas</li>
+          <li>Señal anti no-show</li>
+          <li>Panel de no-shows y dinero</li>
+          <li>Envío por lotes</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-pink">Empezar con Pro</a>
+      </div>
+      <div class="pcard pink">
+        <div class="pname">Business</div>
+        <div class="amt">39€ <span>/mes</span></div>
+        <div class="desc">Para varios profesionales o sedes.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Varios profesionales/sedes</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPINALOCAL ================= -->
+<section id="opinalocal">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#a78bfa">Producto 10 · Nuevo</div>
+      <h2>OpinaLocal</h2>
+      <p>Capta la queja en privado antes de que se convierta en una mala reseña pública.</p>
+    </div>
+    <div class="product rev">
+      <div class="pvisual">
+        <div class="mock-row">
+          <div class="av" style="background:rgba(139,92,246,.16);color:#a78bfa">★5</div>
+          <div class="ml"><b>Cliente contento</b><span>Encuesta → reseña en Google</span></div>
+          <span class="badge" style="background:rgba(34,197,94,.15);color:var(--green)">A Google</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(139,92,246,.16);color:#a78bfa">🛡️</div>
+          <div class="ml"><b>Queja captada en privado</b><span>Resuelta antes de publicarse</span></div>
+          <span class="badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Resuelta</span>
+        </div>
+        <div class="mock-row">
+          <div class="av" style="background:rgba(139,92,246,.16);color:#a78bfa">NPS</div>
+          <div class="ml"><b>NPS este mes</b><span>Satisfacción de clientes</span></div>
+          <span class="badge" style="background:rgba(139,92,246,.18);color:#a78bfa">72 · +8</span>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="plogo"><span class="ic" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">🎯</span> OpinaLocal</div>
+        <h3>Para restaurantes, hoteles, clínicas y comercios.</h3>
+        <p class="lead">Pregunta a tus clientes con una mini-encuesta: a los contentos los llevas a Google y las quejas las recibes en privado para resolverlas a tiempo.</p>
+        <ul class="flist">
+          <li><span class="ck violet-ck">✓</span> Encuesta de satisfacción por QR o enlace</li>
+          <li><span class="ck violet-ck">✓</span> Clientes contentos → directos a reseña en Google</li>
+          <li><span class="ck violet-ck">✓</span> Quejas captadas en privado, no en público</li>
+          <li><span class="ck violet-ck">✓</span> Panel NPS y alertas de queja en tiempo real</li>
+          <li><span class="ck violet-ck">✓</span> Respuestas ilimitadas y QR sin marca en Pro</li>
+        </ul>
+        <div style="margin-top:22px"><a href="https://asifer2005.github.io/opinalocal/" target="_blank" rel="noopener" class="btn violet">Ver demo en vivo →</a></div>
+      </div>
+    </div>
+
+    <!-- PRECIOS OPINALOCAL -->
+    <div class="price-grid violet" style="margin-top:50px">
+      <div class="pcard violet">
+        <div class="pname">Free</div>
+        <div class="amt">0€ <span>/mes</span></div>
+        <div class="desc">Empieza a medir satisfacción.</div>
+        <ul>
+          <li>1 punto de encuesta</li>
+          <li>Hasta 25 respuestas/mes</li>
+          <li>Filtro contento → Google</li>
+        </ul>
+        <a href="#contacto" class="pbtn">Empezar gratis</a>
+      </div>
+      <div class="pcard violet pop">
+        <span class="poptag">★ Más popular</span>
+        <div class="pname">Pro</div>
+        <div class="amt">15€ <span>/mes</span></div>
+        <div class="desc">Para proteger tu reputación.</div>
+        <ul>
+          <li>Respuestas ilimitadas</li>
+          <li>Panel NPS completo</li>
+          <li>QR y enlace sin marca</li>
+          <li>Alertas de queja</li>
+        </ul>
+        <a href="#contacto" class="pbtn fill-violet">Empezar con Pro</a>
+      </div>
+      <div class="pcard violet">
+        <div class="pname">Business</div>
+        <div class="amt">39€ <span>/mes</span></div>
+        <div class="desc">Para varios locales.</div>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-local</li>
           <li>Soporte prioritario</li>
         </ul>
         <a href="#contacto" class="pbtn">Hablar con ventas</a>
